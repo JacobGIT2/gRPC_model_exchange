@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+service Exchanger {
+    rpc ExchangeTensor(Tensor) returns (Tensor) {}
+}
+
+message Tensor {
+    int32 id = 1;
+    repeated int32 size = 2;
+    repeated float tensor = 3;
+}
